@@ -1,22 +1,19 @@
 import React from "react";
-import { cloudy, sunny, snow, blizzard } from "./../../img";
-import Days from "./Days";
+import Day from "./Day";
 import styled from 'styled-components';
+import serverData from "../../serverData";
 
 const DaysOfWeek = () => {
     return (
-        <Day >
-            <Days href='/monday' days='Monday' src={cloudy} humidity='30%' />
-            <Days href='/tuesday' days='Tuesday' src={sunny} humidity='36%' />
-            <Days href='/wednesday' days='Wednesday' src={snow} humidity='20%' />
-            <Days href='/thursday' days='Thursday' src={blizzard} humidity='15%' />
-        </Day>
+        <Days >
+            {serverData.map(item => <Day days={item.days} src={item.src} humidity={item.humidity} />)}
+        </Days>
     )
 }
 
 export default DaysOfWeek;
 
-const Day = styled.div`
+const Days = styled.div`
 display: flex;
 justify-content: space-between;
 `;

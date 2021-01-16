@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Days = (props) => {
+const Day = (props) => {
     return (
         <DaysBlock href={props.href}>
             <p>{props.days}</p>
@@ -12,7 +12,7 @@ const Days = (props) => {
     )
 }
 
-export default Days;
+export default Day;
 
 const DaysBlock = styled.a`
 width: 125px;
@@ -23,6 +23,7 @@ border-radius: 5px;
 margin: 10px 0;
 color: black;
 border: 1px solid black;
+cursor: pointer;
 `;
 
 const Img = styled.img`

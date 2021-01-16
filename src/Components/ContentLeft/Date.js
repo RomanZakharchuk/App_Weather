@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import data from "../../Data";
+import time from "../../Time";
+
+
 
 const Date = () => {
     return (
         <DateBlock>
-            <p>5:05 PM, Mon, Nov 23, 2020</p>
+            <p>{time} PM, {data}</p>
         </DateBlock>
     )
 }
