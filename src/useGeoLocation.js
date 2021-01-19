@@ -14,7 +14,7 @@ const useGeoLocation = (options = {}) => {
     };
 
     const onError = error => {
-        setLocation(error.message);
+        setError(error.message);
     }
 
     useEffect(() => {
